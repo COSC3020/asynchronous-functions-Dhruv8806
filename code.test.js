@@ -1,7 +1,7 @@
 const fs = require('fs');
 const jsc = require('jsverify');
 
-// const async = require('async');
+const async = require('async');
 eval(fs.readFileSync('code.js')+'');
 
 const countMatchesProperty = jsc.forall(jsc.array(jsc.number), jsc.number, async function (array, key) {
